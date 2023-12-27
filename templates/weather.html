@@ -34,14 +34,14 @@
 <body>
   <nav class="navbar navbar-expand-lg" style="background-color: rgb(36, 177, 36)">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">AgriConnect</a>
+      <a class="navbar-brand" href="index">AgriConnect</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="">Home</a>
+            <a class="nav-link active" aria-current="page" href="index">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Market</a>
@@ -85,23 +85,19 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="partlycloudymodalLabel">Partly Cloudy Weather Tips</h5>
+              <h5 class="modal-title" id="partlycloudymodalLabel">यहाँ समाधानहरू छन् जुन किसानहरूले आंशिक बादल मौसममा विचार गर्न सक्छन्ः</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
               <ol>
-                <li><strong>Optimize Irrigation Schedules:</strong>
-                  <p>During partly cloudy weather, adjust irrigation schedules based on the cloud cover and expected
-                    sunlight. Use moisture sensors in the soil to monitor actual moisture levels and avoid
-                    overwatering.</p>
+                <li><strong>सिँचाइ तालिकाहरू अनुकूलन गर्नुहोस्ः</strong>
+                  <p>आंशिक बादलिलो मौसममा, सूर्यको प्रकाशको तीव्रता दिनभरि फरक-फरक हुन सक्छ। बादलको आवरण र अपेक्षित सूर्यको प्रकाशको आधारमा किसानहरूले आफ्नो सिँचाइको समय तालिका समायोजन गर्नुपर्छ। <br>वास्तविक आर्द्रताको स्तर निगरानी गर्न र कम सूर्यको प्रकाशको अवधिमा अत्यधिक पानीबाट बच्न माटोमा आर्द्रता सेन्सरहरू प्रयोग गर्नुहोस्। यसले जलभराव रोक्न र पानीको बर्बादी कम गर्न मद्दत गर्दछ।</p>
                 </li>
 
-                <li><strong>Implement Crop Protection Measures:</strong>
-                  <p>Partly cloudy conditions can be associated with unpredictable weather patterns. Be vigilant for
-                    sudden changes in weather. Consider implementing crop protection measures, such as covering
-                    sensitive crops with temporary shading materials or row covers.</p>
+                <li><strong>फसल संरक्षण उपायहरू कार्यान्वयन गर्नुहोस्ः</strong>
+                  <p>आंशिक बादलको अवस्था कहिलेकाहीँ अप्रत्याशित मौसम ढाँचासँग सम्बन्धित हुन सक्छ। मौसममा अचानक परिवर्तन, जस्तै अप्रत्याशित वर्षा वा तापक्रममा उतारचढावका लागि किसानहरू सतर्क हुनुपर्छ। फसल संरक्षण उपायहरू कार्यान्वयन गर्ने विचार गर्नुहोस्, जस्तै संवेदनशील बालीहरूलाई अस्थायी छायांकन सामग्री वा पङ्क्ति आवरणले ढाक्ने। यसले बालीहरूलाई अचानक तापक्रम परिवर्तनबाट जोगाउन र क्षतिको जोखिम कम गर्न मद्दत गर्न सक्छ।</p>
                 </li>
               </ol>
             </div>
@@ -114,12 +110,11 @@
     </div>
   </div>
   </section>
- 
-
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+ 
+  
   <script>
     const apiKey = '512545a587374ea6bfd102326232712';
     const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=kathmandu`;
