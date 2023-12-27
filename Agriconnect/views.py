@@ -5,3 +5,5 @@ def index(request):
     return render(request,'index.html')
 def pricing(request):
     return render(request,'pricing.html')
+def fertilizerCalculator(request):
+    return render(request,'fertilizerCalculator.html')
