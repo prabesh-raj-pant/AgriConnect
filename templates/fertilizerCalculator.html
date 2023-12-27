@@ -27,23 +27,23 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index">Home</a>
+            <a class="nav-link active" aria-current="page" href="index">मेरो छलफल क्षेत्र</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Market</a>
+            <a class="nav-link" href="#">मेरो बजार</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pricing">Pricing</a>
+            <a class="nav-link" href="pricing">मूल्य निर्धारण</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="weather">weather</a>
+            <a class="nav-link" href="weather">मौसम</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Farming Advice
+              खेती सल्लाह
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="fertilizerCalculator">fertilizer calculator</a></li>
+              <li><a class="dropdown-item" href="fertilizerCalculator">मल क्याल्कुलेटर</a></li>
               <li><a class="dropdown-item" href="#">modern farming technique</a></li>
               <li><a class="dropdown-item" href="#">financial Schemes</a></li>
             </ul>
@@ -129,10 +129,10 @@
         var suggestion = "";
         switch (crop) {
             case "tomato":
-                suggestion = "After 20 days of planting,flowering stage and every 3-4 weeks during growth ,apply 12gm DAP 15gm UREA and 8gm potassium.Well-decomposed compost is an excellent organic fertilizer.Aged or composted manure can be used, but avoid fresh manure, as it may burn the plants.Mulch around the plants to conserve moisture and regulate soil temperature.Monitor your plants for signs of nutrient deficiencies or excesses, such as yellowing leaves, stunted growth, or leaf burn. ";
+                suggestion = "रोपाइँको 20 दिन, फुल फुल्ने चरण र प्रत्येक 3-4 हप्तामा वृद्धिको समयमा, 12 ग्राम डीएपी 15 ग्राम युआरइए र 8 ग्राम पोटासियम लगाउनुहोस्।राम्ररी सडेको कम्पोस्ट एउटा उत्कृष्ट जैविक मल हो।वृद्ध वा कम्पोस्ट गरिएको मल प्रयोग गर्न सकिन्छ, तर ताजा मलबाट जोगिनुहोस्, किनकि यसले बिरुवालाई जलाउन सक्छ।आर्द्रता संरक्षण गर्न र माटोको तापक्रम नियन्त्रण गर्न बिरुवाको वरिपरि मल्च गर्नुहोस्।पोषक तत्वको कमी वा अधिकताको सङ्केतहरूका लागि आफ्ना बोटबिरुवाहरूको निगरानी गर्नुहोस्, जस्तै पहेँलो पात, रोकिएका वृद्धि, वा पात जलेको।";
                 break;
             case "Bean":
-                suggestion = "After 15 days of planting,flowering stage and every 2-3 weeks during growth ,apply 10gm DAP 12gm UREA and 4gm potassium.Consider supplementing with micro-nutrients like boron, zinc, and iron if the soil test indicates deficiencies.Ensure proper water management, as over-irrigation or waterlogged conditions can affect nutrient uptake.Mulch around the plants to conserve moisture, suppress weeds, and gradually release nutrients.";
+                suggestion = "रोपेको १५ दिनपछि, फूल फुल्ने अवस्था र वृद्धिको अवधिमा प्रत्येक २-३ हप्तामा १० ग्राम डीएपी १२ ग्राम यूरिया र ४ ग्राम पोटासियम प्रयोग गर्नुहोस्। माटो परीक्षणले कमजोरी देखिएमा बोरोन, जस्ता र फलाम जस्ता सूक्ष्म पोषक तत्वहरू थप्ने विचार गर्नुहोस्। उचित पानी व्यवस्थापन सुनिश्चित गर्नुहोस्। , अत्यधिक सिँचाइ वा पानी जमेको अवस्थाले पोषक तत्वको खपतलाई असर गर्न सक्छ। ओसिलो संरक्षण गर्न, झारलाई दबाउन र बिस्तारै पोषक तत्वहरू छोड्न बिरुवाको वरिपरि मल्च गर्नुहोस्।";
                 break;
             case "onion":
                 suggestion = "Apply compost manure urea, DAP, and potassium as per recommended rates during different growth stages.";
@@ -141,7 +141,7 @@
                 suggestion = "Select a crop to get fertilizer application suggestions.";
         }
 
-        document.getElementById("suggestion").innerHTML = `<p>Fertilizer Application Suggestion: ${suggestion}</p>`;
+        document.getElementById("suggestion").innerHTML = `<p> <h2> मल हाल्ने विधि:</h2> ${suggestion}</p>`;
     }
 </script>
 
