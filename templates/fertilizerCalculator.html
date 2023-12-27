@@ -121,21 +121,21 @@
 
 
         document.getElementById("result").innerHTML =
-            `<p>Compost Manure Required: ${fertilizerRecommendation[crop].compost.toFixed(2)} kg</p>` +
-            `<p>Urea Required: ${fertilizerRecommendation[crop].urea.toFixed(2)} kg</p>` +
-            `<p>DAP Required: ${fertilizerRecommendation[crop].dap.toFixed(2)} kg</p>` +
-            `<p>Potassium Required: ${fertilizerRecommendation[crop].potassium.toFixed(2)} kg</p>`;
+            `<p>कम्पोस्ट: ${fertilizerRecommendation[crop].compost.toFixed(2)} kg</p>` +
+            `<p>युरिया: ${fertilizerRecommendation[crop].urea.toFixed(2)} kg</p>` +
+            `<p>डी. ए. पी: ${fertilizerRecommendation[crop].dap.toFixed(2)} kg</p>` +
+            `<p>पोटास: ${fertilizerRecommendation[crop].potassium.toFixed(2)} kg</p>`;
 
         var suggestion = "";
         switch (crop) {
             case "tomato":
-                suggestion = "Apply compost manure as a basal application and urea, DAP, and potassium as per recommended rates during different growth stages.";
+                suggestion = "After 20 days of planting,flowering stage and every 3-4 weeks during growth ,apply 12gm DAP 15gm UREA and 8gm potassium.Well-decomposed compost is an excellent organic fertilizer.Aged or composted manure can be used, but avoid fresh manure, as it may burn the plants.Mulch around the plants to conserve moisture and regulate soil temperature.Monitor your plants for signs of nutrient deficiencies or excesses, such as yellowing leaves, stunted growth, or leaf burn. ";
                 break;
             case "Bean":
-                suggestion = "Apply compost manure as a basal application and urea, DAP, and potassium as per recommended rates during different growth stages.";
+                suggestion = "After 15 days of planting,flowering stage and every 2-3 weeks during growth ,apply 10gm DAP 12gm UREA and 4gm potassium.Consider supplementing with micro-nutrients like boron, zinc, and iron if the soil test indicates deficiencies.Ensure proper water management, as over-irrigation or waterlogged conditions can affect nutrient uptake.Mulch around the plants to conserve moisture, suppress weeds, and gradually release nutrients.";
                 break;
             case "onion":
-                suggestion = "Apply compost manure as a basal application and urea, DAP, and potassium as per recommended rates during different growth stages.";
+                suggestion = "Apply compost manure urea, DAP, and potassium as per recommended rates during different growth stages.";
                 break;
             default:
                 suggestion = "Select a crop to get fertilizer application suggestions.";
