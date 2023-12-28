@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+        /* Add additional custom styles here */
+        body {
+            background-color: #cce6ce;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: rgb(36, 177, 36)">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index">AgriConnect</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index">मेरो छलफल क्षेत्र</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="market">मेरो बजार</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing">मूल्य निर्धारण</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="weather">मौसम</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">खेती सल्लाह</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="fertilizerCalculator">मल क्याल्कुलेटर</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="farmingtechnique">आधुनिक कृषि प्रविधि जानकारी</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="financial">ऋण योजनाहरू</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div style="margin-top: 20px;">
+            <input type="button" class="btn-check" name="options-outlined" id="success-outlined">
+           <a href="market"><label class="btn btn-outline-success" for="success-outlined">farmers</label></a> 
+            <div style="margin-top: 20px;">
+                <input type="button" class="btn-check" name="options-outlined" id="success-outlined" >
+             <label class="btn btn-outline-success" for="success-outlined"><a href="hotel">Hotels</a> </label>  
+
+            </div>
+            <div>
+                <div class="jumbotron">
+                    <div class="container">
+                        <h1 class="display-4">Welcome to the Farmers Marketplace</h1>
+                        <p class="lead">Buy fresh products directly from farmers or let them know what you need.</p>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <h2>Available Products</h2>
+                    <div class="row" id="productsContainer">
+                      
+                    </div>
+                </div>
+
+                <div class="container">
+                    <h2>Hotel Requests</h2>
+                    <div class="row" id="requestsContainer">
+                    </div>
+                </div>
+
+
+            </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+      
+        const products = [
+        { id: 1, name: 'Apples', price: 2.5,image: 'https://imgs.search.brave.com/_mfMeoVCyYvXDDsxG2MhgC-RMWsy0eLdjpHrdmESQdM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTgy/MTc1MDMyL3Bob3Rv/L2ZyZXNoLWFwcGxl/cy5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9Y3E4UXdzbjdU/T2lGcnNhR05pVGVV/b3VyTjM3cWV3alNk/RlhWZ2pEemV6RT0' },
+        { id: 2, name: 'Tomatoes', price: 1.8,image: 'https://imgs.search.brave.com/12sw3Yy_sQef-aZesEBnQhRyu4XL3goS4ijynGHDncE/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvOTgw/MjYwMDMvcGhvdG8v/dG9tYXRvZXMuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPWQ1/d0V4YXhqNjhQU1ZO/ZVdobzNLRjlQUk9x/MVQwdjBXaEZFdjRX/Vnl5S3c9'  },
+        { id: 3, name: 'Carrots', price: 1.2,image: 'https://imgs.search.brave.com/ix1nUrBfXV2ZIGQBOZFJ5odYBlo3IBjVVcV2FHMIKoM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAwLzgwLzk2LzE3/LzM2MF9GXzgwOTYx/NzM5X2hlcDFVWmFR/UnN5NVdRT1lVM2pr/T3I1Q0I3QTZ4YzNV/LmpwZw'  },
+        { id: 4, name: 'Potatoes', price: 1.5,image: 'https://imgs.search.brave.com/tmqjS2CVf4vrbBSrrgCYtulEg1tR2_DsfrPnDQD-tXM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTMw/MDM2NzMzOC9waG90/by9wb3RhdG9lcy5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/bUdLN04tOW0zZkJp/MVZrVVk5ZFRuVVpq/ZkQyQU9mTGZZa3BO/ZUJDbU90QT0'  },
+        { id: 5, name: 'Lettuce', price: 2.0,image: 'https://imgs.search.brave.com/TnRFPLUQinDjBK8-lSNXvK05wn27qjC4u7vCBMVw-mg/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTYz/NzM5ODIxL3Bob3Rv/L2xldHR1Y2UuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPUcw/NEV4aTJSeG1STGYz/ZkxYdVpkdnp0aFV1/WHZMT2d1WWlqTEI3/WFNWcms9'  },
+        { id: 6, name: 'Cucumbers', price: 1.7,image: 'https://imgs.search.brave.com/Qjl959maJJIHKVL-v2Pdwwa_kSzOqlz3K4YegIYAnj0/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvOTAw/ODExODc2L3Bob3Rv/L2N1Y3VtYmVyLWlu/LXRoZS1nYXJkZW4u/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PUcxbVhPZjlEbmFN/UTNyUk5OSldfYVFn/MFY3aEZnNlRiNmcy/RGFMaGdJTDA9'  },
+        { id: 7, name: 'Strawberries', price: 3.0,image: 'https://imgs.search.brave.com/XayFQ_RHjUicsKc_QiMy7qsXsjtdeG_U632o2cyyX_Y/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNjky/NTQyMzk0L3Bob3Rv/L3N0cmF3YmVycnku/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PVlMUUgyb2hjdkVJ/M0hCWDNlenJ6Vkoy/RFlSMndla2RKNnNz/YjZ5RjZiOTA9'  },
+        { id: 8, name: 'Broccoli', price: 2.2,image: 'https://imgs.search.brave.com/VazP53mskQDS67FoNvi38-076PhFLB4d4cDGN-1SAZ4/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTA4/Nzg3Mzk4MC9waG90/by9mcmVzaC1ncmVl/bi1icm9jY29saS1v/bi13aGl0ZS1iYWNr/Z3JvdW5kLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz01UDdl/MGVOSGM3U0duOFdB/Qzczek1SZi14UUFJ/Y3FSS3FYWGpBTXk4/VTY0PQ' },
+        { id: 9, name: 'Bell Peppers', price: 1.9,image: 'https://imgs.search.brave.com/p-VAwwKjp1ysuvaf7hLfnfodwwZmIVuI80Us30yHLrg/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNDgw/OTMxMzgwL3Bob3Rv/L2JlbGwtcGVwcGVy/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1nenh1dkJybGNH/ZDlzaHREVDJyTXlQ/b0NRajlWekx2MVNr/c2FSU3VORENrPQ' },
+        { id: 10, name: 'Spinach', price: 2.3 ,image: 'https://imgs.search.brave.com/ULKg12x5pkbSrPM64ysTZ0rvQu-1HQ77HvqA5uWN2Ws/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNTIy/MTg5OTc3L3Bob3Rv/L3NwaW5hY2guanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPVdu/Zk1hTngteU9oaDM5/M0RaNGx5RzZ0RjNI/cDJvc0Q2UEVtdU9L/c1R2V3M9'}
+ 
+        ];
+
+        const requests = [
+            { id: 1, product: 'Apples', quantity: 10 ,image: 'https://imgs.search.brave.com/_mfMeoVCyYvXDDsxG2MhgC-RMWsy0eLdjpHrdmESQdM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTgy/MTc1MDMyL3Bob3Rv/L2ZyZXNoLWFwcGxl/cy5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9Y3E4UXdzbjdU/T2lGcnNhR05pVGVV/b3VyTjM3cWV3alNk/RlhWZ2pEemV6RT0' },
+            { id: 2, product: 'Tomatoes', quantity: 5 ,image: 'https://imgs.search.brave.com/12sw3Yy_sQef-aZesEBnQhRyu4XL3goS4ijynGHDncE/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvOTgw/MjYwMDMvcGhvdG8v/dG9tYXRvZXMuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPWQ1/d0V4YXhqNjhQU1ZO/ZVdobzNLRjlQUk9x/MVQwdjBXaEZFdjRX/Vnl5S3c9' },
+            { id: 3, product: 'Carrots', quantity: 8,image: 'https://imgs.search.brave.com/ix1nUrBfXV2ZIGQBOZFJ5odYBlo3IBjVVcV2FHMIKoM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAwLzgwLzk2LzE3/LzM2MF9GXzgwOTYx/NzM5X2hlcDFVWmFR/UnN5NVdRT1lVM2pr/T3I1Q0I3QTZ4YzNV/LmpwZw' },
+            { id: 4, product: 'Potatoes', quantity: 15 ,image: 'https://imgs.search.brave.com/tmqjS2CVf4vrbBSrrgCYtulEg1tR2_DsfrPnDQD-tXM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTMw/MDM2NzMzOC9waG90/by9wb3RhdG9lcy5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/bUdLN04tOW0zZkJp/MVZrVVk5ZFRuVVpq/ZkQyQU9mTGZZa3BO/ZUJDbU90QT0' },
+            { id: 5, product: 'Lettuce', quantity: 7,image: 'https://imgs.search.brave.com/TnRFPLUQinDjBK8-lSNXvK05wn27qjC4u7vCBMVw-mg/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTYz/NzM5ODIxL3Bob3Rv/L2xldHR1Y2UuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPUcw/NEV4aTJSeG1STGYz/ZkxYdVpkdnp0aFV1/WHZMT2d1WWlqTEI3/WFNWcms9'  },
+            { id: 6, product: 'Cucumbers', quantity: 12,image: 'https://imgs.search.brave.com/Qjl959maJJIHKVL-v2Pdwwa_kSzOqlz3K4YegIYAnj0/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvOTAw/ODExODc2L3Bob3Rv/L2N1Y3VtYmVyLWlu/LXRoZS1nYXJkZW4u/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PUcxbVhPZjlEbmFN/UTNyUk5OSldfYVFn/MFY3aEZnNlRiNmcy/RGFMaGdJTDA9'   },
+            { id: 7, product: 'Strawberries', quantity: 3 ,image: 'https://imgs.search.brave.com/XayFQ_RHjUicsKc_QiMy7qsXsjtdeG_U632o2cyyX_Y/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNjky/NTQyMzk0L3Bob3Rv/L3N0cmF3YmVycnku/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PVlMUUgyb2hjdkVJ/M0hCWDNlenJ6Vkoy/RFlSMndla2RKNnNz/YjZ5RjZiOTA9'},
+            { id: 8, product: 'Broccoli', quantity: 6,image: 'https://imgs.search.brave.com/VazP53mskQDS67FoNvi38-076PhFLB4d4cDGN-1SAZ4/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTA4/Nzg3Mzk4MC9waG90/by9mcmVzaC1ncmVl/bi1icm9jY29saS1v/bi13aGl0ZS1iYWNr/Z3JvdW5kLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz01UDdl/MGVOSGM3U0duOFdB/Qzczek1SZi14UUFJ/Y3FSS3FYWGpBTXk4/VTY0PQ' },
+            { id: 9, product: 'Bell Peppers', quantity: 9,image: 'https://imgs.search.brave.com/p-VAwwKjp1ysuvaf7hLfnfodwwZmIVuI80Us30yHLrg/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNDgw/OTMxMzgwL3Bob3Rv/L2JlbGwtcGVwcGVy/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1nenh1dkJybGNH/ZDlzaHREVDJyTXlQ/b0NRajlWekx2MVNr/c2FSU3VORENrPQ'  },
+            { id: 10, product: 'Spinach', quantity: 5,image: 'https://imgs.search.brave.com/ULKg12x5pkbSrPM64ysTZ0rvQu-1HQ77HvqA5uWN2Ws/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNTIy/MTg5OTc3L3Bob3Rv/L3NwaW5hY2guanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPVdu/Zk1hTngteU9oaDM5/M0RaNGx5RzZ0RjNI/cDJvc0Q2UEVtdU9L/c1R2V3M9' }
+        ];
+
+        // Function to render products
+        function renderProducts() {
+            const productsContainer = document.getElementById('productsContainer');
+            productsContainer.innerHTML = '';
+
+            products.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'col-md-4 mb-4';
+                card.innerHTML = `
+             <div class="card">
+               <div class="card-body">
+                <img src="${product.image}" class="card-img-top" alt="${product.name}">
+                 <h5 class="card-title">${product.name}</h5>
+                 <p class="card-text">Price: Rs.${product.price}</p>
+               </div>
+             </div>
+           `;
+                productsContainer.appendChild(card);
+            });
+        }
+
+        // Function to render requests
+        function renderRequests() {
+            const requestsContainer = document.getElementById('requestsContainer');
+            requestsContainer.innerHTML = '';
+
+            requests.forEach(request => {
+                const card = document.createElement('div');
+                card.className = 'col-md-4 mb-4';
+                card.innerHTML = `
+             <div class="card">
+               <div class="card-body">
+                <img src="${request.image}" class="card-img-top" alt="${request.name}">
+                 <h5 class="card-title">${request.product}</h5>
+                 <p class="card-text">Quantity: ${request.quantity}</p>
+               </div>
+             </div>
+           `;
+                requestsContainer.appendChild(card);
+            });
+        }
+
+        // Initial rendering
+        renderProducts();
+        renderRequests();
+    </script>
+</body>
+
+</html>

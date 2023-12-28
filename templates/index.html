@@ -4,229 +4,231 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title></title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <style>
-        /* Add additional custom styles here */
-        body {
-            background-color: #f8f9fa;
-        }
-        .post-container {
-            margin-top: 20px;
-        }
-        .reaction-btn {
-            cursor: pointer;
-        }
-        #imageInput {
-          width: 100%;
-          margin-bottom: 10px;
+      /* Add additional custom styles here */
+      body {
+        background-color: #cce6ce;
       }
-
+      .post-container {
+        margin-top: 20px;
+      }
+      .reaction-btn {
+        cursor: pointer;
+      }
+      #imageInput {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      
       .post img {
-          max-width: 100%;
-          margin-top: 10px;
+        max-width: 100%;
+        margin-top: 10px;
       }
     </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg" style="background-color: rgb(36, 177, 36)">
-        <div class="container-fluid">
+      <div class="container-fluid">
           <a class="navbar-brand" href="index">AgriConnect</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index">मेरो छलफल क्षेत्र</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">मेरो बजार</a>
-              </li><li class="nav-item">
-                <a class="nav-link" href="pricing">मूल्य निर्धारण</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="weather">मौसम</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  खेती सल्लाह
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="fertilizerCalculator">मल क्याल्कुलेटर</a></li>
-                  <li><a class="dropdown-item" href="#">modern farming technique</a></li>
-                  <li><a class="dropdown-item" href="#">financial Schemes</a></li>
-                </ul>
-              </li>
-              
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="index">मेरो छलफल क्षेत्र</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="market">मेरो बजार</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="pricing">मूल्य निर्धारण</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="weather">मौसम</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">खेती सल्लाह</a>
+                      <ul class="dropdown-menu">
+                          <li>
+                              <a class="dropdown-item" href="fertilizerCalculator">मल क्याल्कुलेटर</a>
+                          </li>
+                          <li>
+                              <a class="dropdown-item" href="farmingtechnique">आधुनिक कृषि प्रविधि जानकारी</a>
+                          </li>
+                          <li>
+                              <a class="dropdown-item" href="financial">financial Schemes</a>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+              <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
           </div>
-        </div>
-      </nav>
-<section>
-  <div class="container mt-5">
-    <div class="row">
-        <div class="col-md-8 offset-md-2">
+      </div>
+  </nav>
+
+    <section>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
             <!-- Post Form -->
             <div class="card mb-3">
-                <div class="card-body">
-                    <form id="postForm">
-                        <div class="form-group">
-                            <label for="postContent">What's on your mind?</label>
-                            <textarea class="form-control" id="postContent" rows="3" required></textarea>
-                        </div><input type="file" id="imageInput" accept="image/*">
-                        <button type="submit" class="btn btn-primary">Post</button>
-                    </form>
-                </div>
+              <div class="card-body">
+                <form id="postForm">
+                  <div class="form-group">
+                    <label for="postContent">What's on your mind?</label>
+                    <textarea class="form-control" id="postContent" rows="3" required></textarea>
+                  </div>
+                  <input type="file" id="imageInput" accept="image/*" />
+                  <button type="submit" class="btn btn-primary">Post</button>
+                </form>
+              </div>
             </div>
 
             <!-- News Feed -->
             <div id="newsFeed" class="post-container">
-                <!-- Posts will be dynamically added here using JavaScript -->
+              <!-- Posts will be dynamically added here using JavaScript -->
             </div>
+          </div>
         </div>
-    </div>
-</div>
-</section>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const postForm = document.getElementById('postForm');
-    const newsFeed = document.getElementById('newsFeed');
-
-    postForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-        const postContent = document.getElementById('postContent').value;
-
-        if (postContent.trim() !== '') {
-            createPost(postContent);
-            postForm.reset();
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const postForm = document.getElementById('postForm')
+        const newsFeed = document.getElementById('newsFeed')
+      
+        postForm.addEventListener('submit', function (event) {
+          event.preventDefault()
+          const postContent = document.getElementById('postContent').value
+      
+          if (postContent.trim() !== '') {
+            createPost(postContent)
+            postForm.reset()
+          }
+        })
+      
+        function createPost(content) {
+          const postCard = document.createElement('div')
+          postCard.className = 'card mb-3'
+          const imageInput = document.getElementById('imageInput')
+          const imageData = imageInput.files[0]
+      
+          const postCardBody = document.createElement('div')
+          postCardBody.className = 'card-body'
+          if (imageData) {
+            const imageElement = document.createElement('img')
+            imageElement.src = URL.createObjectURL(imageData)
+            postCard.appendChild(imageElement)
+          }
+      
+          const postContent = document.createElement('p')
+          postContent.className = 'card-text'
+          postContent.textContent = content
+      
+          const reactionBtn = document.createElement('button')
+          reactionBtn.className = 'btn btn-link reaction-btn'
+          reactionBtn.textContent = 'Like'
+          reactionBtn.addEventListener('click', function () {
+            reactToPost(reactionBtn)
+          })
+      
+          const commentBtn = document.createElement('button')
+          commentBtn.className = 'btn btn-link reaction-btn'
+          commentBtn.textContent = 'Comment'
+          commentBtn.addEventListener('click', function () {
+            addComment(postCard)
+          })
+      
+          postCardBody.appendChild(postContent)
+          postCardBody.appendChild(reactionBtn)
+          postCardBody.appendChild(commentBtn)
+          postCard.appendChild(postCardBody)
+      
+          newsFeed.prepend(postCard)
         }
-    });
-
-    function createPost(content) {
-        const postCard = document.createElement('div');
-        postCard.className = 'card mb-3';
-        const imageInput = document.getElementById('imageInput');
-        const imageData = imageInput.files[0];
-
-        const postCardBody = document.createElement('div');
-        postCardBody.className = 'card-body';
-        if (imageData) {
-            const imageElement = document.createElement('img');
-            imageElement.src = URL.createObjectURL(imageData);
-            postCard.appendChild(imageElement);
+      
+        function reactToPost(btn) {
+          const currentText = btn.textContent
+          btn.textContent = currentText === 'Like' ? 'Unlike' : 'Like'
         }
-
-        const postContent = document.createElement('p');
-        postContent.className = 'card-text';
-        postContent.textContent = content;
-
-        const reactionBtn = document.createElement('button');
-        reactionBtn.className = 'btn btn-link reaction-btn';
-        reactionBtn.textContent = 'Like';
-        reactionBtn.addEventListener('click', function () {
-            reactToPost(reactionBtn);
-        });
-
-        const commentBtn = document.createElement('button');
-        commentBtn.className = 'btn btn-link reaction-btn';
-        commentBtn.textContent = 'Comment';
-        commentBtn.addEventListener('click', function () {
-            addComment(postCard);
-        });
-
-        postCardBody.appendChild(postContent);
-        postCardBody.appendChild(reactionBtn);
-        postCardBody.appendChild(commentBtn);
-        postCard.appendChild(postCardBody);
-
-        newsFeed.prepend(postCard);
-    }
-
-    function reactToPost(btn) {
-        const currentText = btn.textContent;
-        btn.textContent = currentText === 'Like' ? 'Unlike' : 'Like';
-    }
-
-    function addComment(postCard) {
-        const comment = prompt('Add a comment:');
-        if (comment) {
-            const commentParagraph = document.createElement('p');
-            commentParagraph.className = 'card-text ml-3';
-            commentParagraph.textContent = comment;
-
-            postCard.querySelector('.card-body').appendChild(commentParagraph);
+      
+        function addComment(postCard) {
+          const comment = prompt('Add a comment:')
+          if (comment) {
+            const commentParagraph = document.createElement('p')
+            commentParagraph.className = 'card-text ml-3'
+            commentParagraph.textContent = comment
+      
+            postCard.querySelector('.card-body').appendChild(commentParagraph)
+          }
         }
-    }
-});
-
-function addPost() {
-    const imageInput = document.getElementById('imageInput');
-    const postInput = document.getElementById('postInput');
-    const postText = postInput.value.trim();
-    const imageData = imageInput.files[0];
-
-    if (postText !== '' || imageData) {
-        const postContainer = document.getElementById('postsContainer');
-        const postCard = document.createElement('div');
-        postCard.className = 'post';
-
-        if (imageData) {
-            const imageElement = document.createElement('img');
-            imageElement.src = URL.createObjectURL(imageData);
-            postCard.appendChild(imageElement);
+      })
+      
+      function addPost() {
+        const imageInput = document.getElementById('imageInput')
+        const postInput = document.getElementById('postInput')
+        const postText = postInput.value.trim()
+        const imageData = imageInput.files[0]
+      
+        if (postText !== '' || imageData) {
+          const postContainer = document.getElementById('postsContainer')
+          const postCard = document.createElement('div')
+          postCard.className = 'post'
+      
+          if (imageData) {
+            const imageElement = document.createElement('img')
+            imageElement.src = URL.createObjectURL(imageData)
+            postCard.appendChild(imageElement)
+          }
+      
+          if (postText !== '') {
+            const postContent = document.createElement('p')
+            postContent.textContent = postText
+            postCard.appendChild(postContent)
+          }
+      
+          const reactionSpan = document.createElement('span')
+          reactionSpan.className = 'reaction'
+          reactionSpan.textContent = '👍'
+          reactionSpan.onclick = function () {
+            reactToPost(this)
+          }
+      
+          const commentsContainer = document.createElement('div')
+          commentsContainer.id = 'commentsContainer'
+      
+          const commentInput = document.createElement('textarea')
+          commentInput.placeholder = 'Add a comment...'
+      
+          const commentButton = document.createElement('button')
+          commentButton.textContent = 'Comment'
+          commentButton.onclick = function () {
+            addComment(this)
+          }
+      
+          postCard.appendChild(reactionSpan)
+          postCard.appendChild(commentsContainer)
+          postCard.appendChild(commentInput)
+          postCard.appendChild(commentButton)
+      
+          postContainer.appendChild(postCard)
+      
+          postInput.value = ''
+          imageInput.value = ''
         }
-
-        if (postText !== '') {
-            const postContent = document.createElement('p');
-            postContent.textContent = postText;
-            postCard.appendChild(postContent);
-        }
-
-        const reactionSpan = document.createElement('span');
-        reactionSpan.className = 'reaction';
-        reactionSpan.textContent = '👍';
-        reactionSpan.onclick = function () {
-            reactToPost(this);
-        };
-
-        const commentsContainer = document.createElement('div');
-        commentsContainer.id = 'commentsContainer';
-
-        const commentInput = document.createElement('textarea');
-        commentInput.placeholder = 'Add a comment...';
-
-        const commentButton = document.createElement('button');
-        commentButton.textContent = 'Comment';
-        commentButton.onclick = function () {
-            addComment(this);
-        };
-
-        postCard.appendChild(reactionSpan);
-        postCard.appendChild(commentsContainer);
-        postCard.appendChild(commentInput);
-        postCard.appendChild(commentButton);
-
-        postContainer.appendChild(postCard);
-
-        postInput.value = '';
-        imageInput.value = '';
-    }
-}
-
-</script>
+      }
+    </script>
   </body>
 </html>

@@ -9,3 +9,11 @@ def fertilizerCalculator(request):
     return render(request,'fertilizerCalculator.html')
 def weather(request):
     return render(request,'weather.html')
+def financial(request):
+    return render(request,'financial.html')
+def farmingtechnique(request):
+    return render(request,'farmingtechnique.html')
+def hotel(request):
+    return render(request,'hotel.html')
+def market(request):
+    return render(request,'market.html')
